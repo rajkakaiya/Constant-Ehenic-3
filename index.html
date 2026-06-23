@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSTANT ETHNIC | Luxury Men's Ethnic Wear | Wedding, Sherwani & Kurta Pajama</title>
+    <meta name="description" content="Explore Constant Ethnic's premium collection of men's ethnic wear, featuring designer sherwanis, elegant kurta pajamas, bundi sets, and wedding outfits.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ==========================================
+           1. CSS RESET & LUXURY VARIABLES
+           ========================================== */
+        :root {
+            --bg-color: #faf9f6;
+            --card-bg: #ffffff;
+            --text-primary: #111111;
+            --text-secondary: #555555;
+            --text-muted: #888888;
+            --gold: #bfa37a;
+            --gold-hover: #a68c65;
+            --gold-light: #f5f1e9;
+            --border-color: #e5e0d8;
+            --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.03);
+            --shadow-hover: 0 10px 30px rgba(191, 163, 122, 0.15);
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Montserrat', Helvetica, Arial, sans-serif;
+            --header-height: 205px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-size: 14px;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        button, input, select {
+            font-family: inherit;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        /* Common luxury components */
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+        }
+
+        .gold-btn {
+            background-color: var(--text-primary);
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 14px 28px;
+            border: 1px solid var(--text-primary);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .gold-btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: var(--gold);
+            z-index: -1;
+            transition: var(--transition-smooth);
+        }
+
+        .gold-btn:hover {
+            color: #ffffff;
+            border-color: var(--gold);
+        }
+
+        .gold-btn:hover::after {
+            height: 100%;
+        }
+
+        /* Section Heading */
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-family: var(--font-serif);
+            font-size: 38px;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+            font-size: 15px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title p::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 1px;
+            background-color: var(--gold);
+        }
+
+        /* ==========================================
+           2. HEADER & ANNOUNCEMENT BAR
+           ========================================== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background-color: rgba(250, 249, 246, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+        }
+
+        header.scrolled {
+            transform: translateY(-35px); /* hide promo bar */
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            background-color: #ffffff;
+        }
+
+        .promo-bar {
+            background-color: #1a1510;
+            color: var(--gold-light);
+            text-align: center;
+            padding: 8px 0;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            height: 35px;
+            overflow: hidden;
+        }
+
+        .promo-slider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            animation: promoSlide 10s infinite;
+        }
+
+        @keyframes promoSlide {
+            0%, 45% { transform: translateY(0); }
+            50%, 95% { transform: translateY(-100%); }
+            100% { transform: translateY(0); }
+        }
+
+        .promo-item {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 100%;
+        }
+
+        .navbar-main {
+            height: 170px;
+            display: flex;
+            justify-content: flex-end; /* Align search box to the right */
+            align-items: center;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo img {
+            height: 150px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box {
+            position: relative;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 4px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input {
+            font-size: 12px;
+            letter-spacing: 0.05em;
+            color: var(--text-primary);
+            width: 200px;
+            padding-right: 25px;
+        }
+
+        .search-box input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .search-box svg {
+            position: absolute;
+            right: 0;
+            width: 16px;
+            height: 16px;
+            stroke: var(--text-muted);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        /* ==========================================
+           3. HERO BANNER SECTION
+           ========================================== */
+        .hero {
+            margin-top: var(--header-height);
+            height: calc(100vh - var(--header-height));
+            min-height: 600px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background-color: #111;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right, rgba(0,0,0,0.55) 40%, rgba(0,0,0,0.1) 100%), url('make_an_professional_photoshoot_using_202606231235.jpeg');
+            background-size: cover;
+            background-position: center 20%;
+            transform: scale(1.05);
+            animation: zoomOut 20s infinite alternate;
+            z-index: 1;
+        }
+
+        @keyframes zoomOut {
+            0% { transform: scale(1.05); }
+            100% { transform: scale(1.0); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            max-width: 650px;
+            padding-left: 20px;
+            animation: fadeInUp 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-tagline {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-serif);
+            font-size: 64px;
+            font-weight: 300;
+            line-height: 1.1;
+            letter-spacing: 0.05em;
+            margin-bottom: 25px;
+        }
+
+        .hero-content h1 span {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .hero-content p {
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            color: #e5e0d8;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .hero-btn {
+            background-color: var(--gold);
+            color: #ffffff;
+            border: 1px solid var(--gold);
+        }
+
+        .hero-btn::after {
+            background-color: #ffffff;
+        }
+
+        .hero-btn:hover {
+            color: var(--text-primary);
+            border-color: #ffffff;
+        }
+
+        /* Scroll indicator */
+        .scroll-down {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: var(--transition-smooth);
+        }
+
+        .scroll-down:hover {
+            opacity: 1;
+            color: var(--gold);
+        }
+
+        .scroll-down span {
+            width: 1px;
+            height: 50px;
+            background-color: rgba(255,255,255,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scroll-down span::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--gold);
+            animation: scrollLine 2s infinite cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        @keyframes scrollLine {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        /* ==========================================
+           4. SHOP COLLECTION SECTION
+           ========================================== */
+        .shop-section {
+            padding: 100px 0;
+            background-color: var(--bg-color);
+        }
+
+        /* ==========================================
+           5. PRODUCT GRID & CARD STYLING
+           ========================================== */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px 30px;
+            min-height: 400px;
+            transition: var(--transition-smooth);
+        }
+
+        @media (max-width: 1100px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition-smooth);
+            position: relative;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: showCard 0.6s forwards cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        @keyframes showCard {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow-hover);
+            border-color: var(--gold);
+        }
+
+        .card-image-wrapper {
+            position: relative;
+            aspect-ratio: 3 / 4;
+            overflow: hidden;
+            background-color: #f0ede6;
+        }
+
+        .card-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .product-card:hover .card-image-wrapper img {
+            transform: scale(1.06);
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--gold);
+            color: #ffffff;
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            z-index: 9;
+        }
+
+        .hover-actions {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(100%);
+            transition: var(--transition-smooth);
+            z-index: 10;
+        }
+
+        .product-card:hover .hover-actions {
+            transform: translateY(0);
+        }
+
+        .quick-view-btn {
+            background-color: #ffffff;
+            color: var(--text-primary);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 12px 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            border: 1px solid #ffffff;
+            width: 80%;
+        }
+
+        .quick-view-btn:hover {
+            background-color: var(--gold);
+            color: #ffffff;
+            border-color: var(--gold);
+        }
+
+        .card-details {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .card-category {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-family: var(--font-serif);
+            font-size: 17px;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            letter-spacing: 0.02em;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            gap: 2px;
+            margin-bottom: 8px;
+            color: var(--gold);
+        }
+
+        .rating-stars svg {
+            width: 12px;
+            height: 12px;
+            fill: currentColor;
+        }
+
+        /* No results styled card */
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #ffffff;
+            border: 1px dashed var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        .no-results svg {
+            width: 50px;
+            height: 50px;
+            stroke: var(--gold);
+            stroke-width: 1;
+            margin-bottom: 20px;
+            opacity: 0.6;
+        }
+
+        .no-results h3 {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            font-weight: 400;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        /* ==========================================
+           6. QUICK VIEW MODAL
+           ========================================== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.6);
+            z-index: 250;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-container {
+            width: 900px;
+            max-width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+            display: flex;
+            position: relative;
+            transform: scale(0.9);
+            transition: var(--transition-smooth);
+            border: 1px solid var(--gold);
+        }
+
+        .modal-overlay.open .modal-container {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+            background-color: #ffffff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .modal-image {
+            width: 45%;
+            aspect-ratio: 3 / 4;
+            background-color: var(--gold-light);
+            overflow: hidden;
+        }
+
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-details {
+            width: 55%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+
+        @media (max-width: 768px) {
+            .modal-container {
+                flex-direction: column;
+            }
+            .modal-image {
+                width: 100%;
+                height: 250px;
+            }
+            .modal-details {
+                width: 100%;
+                padding: 25px;
+            }
+        }
+
+        .modal-category {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .modal-title {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 1.2;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+        }
+
+        .modal-rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 20px;
+            color: var(--gold);
+            font-size: 12px;
+        }
+
+        .modal-rating-stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .modal-rating-stars svg {
+            width: 13px;
+            height: 13px;
+            fill: currentColor;
+        }
+
+        .modal-desc {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            font-size: 13.5px;
+            line-height: 1.7;
+        }
+
+        .modal-section-title {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .size-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .size-option {
+            width: 42px;
+            height: 42px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 11px;
+            font-weight: 600;
+            transition: var(--transition-smooth);
+        }
+
+        .size-option:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .size-option.active {
+            background-color: var(--text-primary);
+            border-color: var(--text-primary);
+            color: #ffffff;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        .modal-actions button {
+            flex-grow: 1;
+        }
+
+        /* ==========================================
+           7. TOAST NOTIFICATIONS
+           ========================================== */
+        .toast-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 300;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            pointer-events: none;
+        }
+
+        .toast {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 16px 24px;
+            border-left: 4px solid var(--gold);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transform: translateX(120%);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            pointer-events: auto;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+        }
+
+        .toast-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .toast-message {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+
+        /* ==========================================
+           8. BRAND EXPERIENCES & SERVICES
+           ========================================== */
+        .experiences {
+            background-color: #1a1510;
+            color: #ffffff;
+            padding: 80px 0;
+            border-top: 1px solid #2a2016;
+            border-bottom: 1px solid #2a2016;
+        }
+
+        .exp-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        @media (max-width: 992px) {
+            .exp-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .exp-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .exp-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .exp-icon {
+            color: var(--gold);
+        }
+
+        .exp-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 1.2;
+        }
+
+        .exp-item h4 {
+            font-family: var(--font-serif);
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+
+        .exp-item p {
+            font-size: 12px;
+            color: #bfa37a;
+            max-width: 220px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ==========================================
+           9. FOOTER STYLING
+           ========================================== */
+        footer {
+            background-color: #111111;
+            color: #ffffff;
+            padding: 80px 0 30px;
+            font-family: var(--font-sans);
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1.5fr 2.5fr;
+            gap: 80px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 992px) {
+            .footer-top {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .footer-logo-col h3 {
+            margin-bottom: 20px;
+        }
+
+        .footer-logo-col h3 img {
+            height: 120px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .footer-logo-col p {
+            color: #999999;
+            font-size: 13px;
+            line-height: 1.8;
+            max-width: 300px;
+            margin-bottom: 25px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-btn {
+            width: 36px;
+            height: 36px;
+            border: 1px solid #333333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #cccccc;
+            transition: var(--transition-smooth);
+        }
+
+        .social-btn:hover {
+            color: var(--gold);
+            border-color: var(--gold);
+            background-color: #1a1510;
+        }
+
+        .social-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .footer-col h4 {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            color: var(--gold);
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #b3b3b3;
+            font-size: 12.5px;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .footer-newsletter-col p {
+            color: #999999;
+            font-size: 12.5px;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .newsletter-form {
+            display: flex;
+            border-bottom: 1px solid #333333;
+            padding-bottom: 5px;
+        }
+
+        .newsletter-form input {
+            flex-grow: 1;
+            color: #ffffff;
+            font-size: 12.5px;
+            padding: 8px 0;
+        }
+
+        .newsletter-form input::placeholder {
+            color: #666666;
+        }
+
+        .newsletter-btn {
+            cursor: pointer;
+            color: var(--gold);
+            padding: 0 10px;
+            transition: var(--transition-smooth);
+        }
+
+        .newsletter-btn:hover {
+            transform: translateX(4px);
+        }
+
+        .newsletter-btn svg {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #222222;
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: #777777;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================
+       HEADER (ANNOUNCEMENT BAR & NAVIGATION)
+       ========================================== -->
+    <header id="header">
+        <div class="promo-bar">
+            <div class="promo-slider">
+                
+                <div class="promo-item">Experience Luxury Tailoring - Book an Appointment at Our Stores</div>
+            </div>
+        </div>
+        <div class="container navbar-main">
+            <a href="#" class="logo">
+                <img src="constant etehnic logo.png" alt="Constant Ethnic Logo">
+            </a>
+
+            <div class="nav-icons">
+                <div class="search-box-desktop">
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="Search ethnic wear...">
+                        <svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+       HERO BANNER SECTION
+       ========================================== -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-tagline">Constant Ethnic Heritage Couture</div>
+                <h1>The Art of <span>Ethnic Wear</span> for the Modern Man</h1>
+                <p>Designed in collaboration with India's finest artisans. A collection crafted for grooms, wedding guests, and festive occasions, redefining elegance through rich silk brocades, hand-woven embroidery, and structured tailoring.</p>
+                <button class="gold-btn hero-btn" onclick="document.getElementById('shop').scrollIntoView();">Explore Collection</button>
+            </div>
+        </div>
+        <div class="scroll-down" onclick="document.getElementById('shop').scrollIntoView();">
+            Scroll down
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       SHOP COLLECTION SECTION
+       ========================================== -->
+    <section class="shop-section" id="shop">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ethnic Wear For Men</h2>
+                <p>Curated Handcrafted Designs</p>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="product-grid">
+                <!-- Javascript will inject products here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       BRAND EXPERIENCES & SERVICES
+       ========================================== -->
+    <section class="experiences">
+        <div class="container">
+            <div class="exp-grid">
+                <div class="exp-item">
+                    <div class="exp-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V6a2 2 0 10-2 2h2zm0 8h.01M19 10a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    <h4>Artisan Craftsmanship</h4>
+                    <p>Designed with meticulous attention to traditional detailing and luxury cuts.</p>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h4>100% Genuine Quality</h4>
+                    <p>Pure raw silks, organic cottons, and rich velvets sourced responsibly.</p>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-icon">
+                        <svg viewBox="0 0 24 24"><path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                    </div>
+                    <h4>Perfect Fit Promise</h4>
+                    <p>Custom adjustments and tailored fits available across all authorized brand stores.</p>
+                </div>
+                <div class="exp-item">
+                    <div class="exp-icon">
+                        <svg viewBox="0 0 24 24"><path d="M16.88 3.549L16.22 3.19C15.01 2.53 13.5 3 12.83 4.22L8.66 12H5.02L3.6 15.22C3.12 16.32 3.59 17.62 4.7 18.1L16.88 23.39C17.98 23.87 19.28 23.4 19.76 22.3L21.18 19.08V15.44L16.88 3.549Z"></path></svg>
+                    </div>
+                    <h4>Complimentary Alterations</h4>
+                    <p>Complimentary alteration services at any Constant Ethnic flagship boutique store.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+       QUICK VIEW MODAL
+       ========================================== -->
+    <div class="modal-overlay" id="quickview-modal">
+        <div class="modal-container">
+            <button class="modal-close close-btn" id="modal-close">
+                <svg viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="modal-image">
+                <img id="modal-img" src="" alt="">
+            </div>
+            <div class="modal-details">
+                <span class="modal-category" id="modal-cat">Category</span>
+                <h2 class="modal-title" id="modal-name">Product Name</h2>
+                <div class="modal-rating">
+                    <div class="modal-rating-stars" id="modal-stars"></div>
+                    <span id="modal-rating-text">(4.5)</span>
+                </div>
+                <p class="modal-desc" id="modal-desc">Detailed product description. Highlighting premium stitching, luxury heritage fabric, and exquisite artisan embroidery patterns.</p>
+                
+                <h4 class="modal-section-title">Select Size</h4>
+                <div class="size-selector" id="modal-sizes">
+                    <div class="size-option" data-size="S">S</div>
+                    <div class="size-option active" data-size="M">M</div>
+                    <div class="size-option" data-size="L">L</div>
+                    <div class="size-option" data-size="XL">XL</div>
+                    <div class="size-option" data-size="XXL">XXL</div>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="gold-btn" id="modal-enquire-btn" onclick="triggerEnquiry()">Enquire Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+       TOAST NOTIFICATION CONTAINER
+       ========================================== -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- ==========================================
+       FOOTER SECTION
+       ========================================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo-col">
+                    <h3>
+                        <img src="constant etehnic logo.png" alt="Constant Ethnic Logo">
+                    </h3>
+                    <p>Designed for the modern global Indian, blending timeless heritage with cutting edge tailoring.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.51-.93 8-4.96 8-9.75z"/></svg></a>
+                        <a href="#" class="social-btn"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M12.315 2c2.43 0 2.784.01 3.796.046 1.07.049 1.8.228 2.273.412.627.243 1.107.568 1.586 1.047.479.479.804.959 1.047 1.586.183.473.363 1.203.412 2.273.047 1.012.047 1.366.047 3.796 0 2.43-.01 2.784-.046 3.796-.049 1.07-.228 1.8-.412 2.273-.243.627-.568 1.107-1.047 1.586-.479.479-.959.804-1.586 1.047-.473.183-1.203.363-2.273.412-1.012.047-1.366.047-3.796.047-2.43 0-2.784-.01-3.796-.046-1.07-.049-1.8-.228-2.273-.412a4.9 4.9 0 01-1.586-1.047 4.903 4.903 0 01-1.047-1.586c-.183-.473-.363-1.203-.412-2.273C2.01 14.784 2 14.43 2 12c0-2.43.01-2.784.046-3.796.049-1.07.228-1.8.412-2.273.243-.627.568-1.107 1.047-1.586.479-.479.959-.804 1.586-1.047.473-.183 1.203-.363 2.273-.412C9.216 2.01 9.57 2 12 2h.315M12 0C9.553 0 9.245.01 8.28.055 7.317.1 6.66.253 6.088.476a6.9 6.9 0 00-2.49 1.62 6.9 6.9 0 00-1.62 2.49c-.223.572-.376 1.228-.42 2.19C1.51 9.245 1.5 9.553 1.5 12s.01 3.245.055 4.28c.045.962.197 1.618.42 2.19a6.9 6.9 0 001.62 2.49c.845.845 1.743 1.353 2.49 1.62.572.223 1.228.376 2.19.42 1.035.045 1.343.055 4.28.055s3.245-.01 4.28-.055c.962-.045 1.618-.197 2.19-.42a6.9 6.9 0 002.49-1.62 6.9 6.9 0 001.62-2.49c.223-.572.376-1.228.42-2.19.045-1.035.055-1.343.055-4.28s-.01-3.245-.055-4.28c-.045-.962-.197-1.618-.42-2.19a6.9 6.9 0 00-1.62-2.49 6.9 6.9 0 00-2.49-1.62c-.572-.223-1.228-.376-2.19-.42C14.755.01 14.447 0 12 0z"/><path d="M12 5.83a6.17 6.17 0 100 12.34 6.17 6.17 0 000-12.34zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.88z"/></svg></a>
+                        <a href="#" class="social-btn"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Customer Care</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                        <li><a href="#">Heritage Fitting Services</a></li>
+                        <li><a href="#">Care Instructions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter-col">
+                    <h4>Subscribe</h4>
+                    <p>Be the first to hear about collections, exclusive events, and luxury style updates.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Thank you for subscribing to our updates!', 'success'); this.reset();">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit" class="newsletter-btn">
+                            <svg viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Constant Ethnic. Created as a custom high-end ethnicwear showcase. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+       10. JAVASCRIPT APP LOGIC
+       ========================================== -->
+    <script>
+        // ==========================================
+        // 1. DATA DEFINITIONS (24 Local Photoshoot Images)
+        // ==========================================
+        const products = [
+            {
+                id: 1,
+                name: "Elegance Gold Embroidered Sherwani",
+                category: "Sherwani",
+                rating: 4.8,
+                reviews: 24,
+                tag: "Best Seller",
+                image: "ChatGPT Image Jun 23, 2026, 12_00_16 PM.png",
+                desc: "An exquisite cream sherwani crafted from luxurious silk blend, featuring intricate resham and gold zardozi embroidery across the bandhgala collar, sleeves, and front panel. Comes with matching churidar pajama."
+            },
+            {
+                id: 2,
+                name: "Classic Cream Silk Kurta Set",
+                category: "Kurta Set",
+                rating: 4.5,
+                reviews: 18,
+                image: "Keep_the_same_model_from_202606231212.jpeg",
+                desc: "Timeless sophistication in soft dupion silk. This cream kurta boasts minimalist embroidery on the placket, designed with side slits and a comfortable mandarin collar. Completed with straight-fit cotton pajamas."
+            },
+            {
+                id: 3,
+                name: "Sapphire Blue Kurta Bundi Set",
+                category: "Kurta Bundi Set",
+                rating: 4.7,
+                reviews: 32,
+                image: "change_the_kurta_design_and_202606231203.jpeg",
+                desc: "Make an impression with this deep sapphire blue kurta paired with a hand-embroidered, structured georgette bundi jacket featuring floral motifs and gold buttons."
+            },
+            {
+                id: 4,
+                name: "Saffron Yellow Linen Kurta",
+                category: "Single Kurta",
+                rating: 4.4,
+                reviews: 14,
+                image: "change_the_kurta_design_and_202606231212.jpeg",
+                desc: "Breathable pure linen kurta in vibrant saffron yellow. Ideal for haldi ceremonies or summer festivities, featuring a modern round neck, side pockets, and roll-up sleeve tabs."
+            },
+            {
+                id: 5,
+                name: "Crimson Red Velvet Sherwani",
+                category: "Sherwani",
+                rating: 4.9,
+                reviews: 19,
+                tag: "Limited Edition",
+                image: "change_the_kurta_design_and_202606231218.jpeg",
+                desc: "Plush crimson velvet sherwani layered with premium satin lining. The heavy collar and chest pocket are detailed with delicate zari and thread work. Includes silk stole and red dhoti pants."
+            },
+            {
+                id: 6,
+                name: "Mint Green Silk Kurta Pajama",
+                category: "Kurta Set",
+                rating: 4.6,
+                reviews: 21,
+                image: "change_the_kurta_design_and_202606231302.jpeg",
+                desc: "An elegant pastel mint green kurta pajama set. The kurta features subtle self-textured jacquard weaving, delivering a sophisticated glow. Paired with white churidar pants."
+            },
+            {
+                id: 7,
+                name: "Teal Blue Nehru Jacket",
+                category: "Nehru Jacket",
+                rating: 4.3,
+                reviews: 15,
+                image: "change_the_pose_2K_202606231305.jpeg",
+                desc: "Versatile teal blue Nehru jacket in micro-textured silk. Built with structured shoulder pads, a classic welt pocket, and metallic monogram buttons. Styles perfectly over any cream kurta."
+            },
+            {
+                id: 8,
+                name: "Royal Ivory Wedding Sherwani",
+                category: "Sherwani",
+                rating: 4.9,
+                reviews: 40,
+                tag: "Wedding Special",
+                image: "make_an_professional_photoshoot_using_202606231235.jpeg",
+                desc: "The ultimate wedding attire for grooms. Structured ivory raw-silk sherwani, adorned with hand-stitched zardozi and pearls in traditional heritage grid layouts. Set includes sherwani, churidar, safa fabric, and stole."
+            },
+            {
+                id: 9,
+                name: "Peach Cotton Silk Kurta Set",
+                category: "Kurta Set",
+                rating: 4.5,
+                reviews: 12,
+                image: "make_an_professional_photoshoot_using_202606231249.jpeg",
+                desc: "Charming peach shade kurta set woven from high-grade cotton silk. Light-weight and comfortable for daytime poojas or mehndi ceremonies, finished with subtle silver piping."
+            },
+            {
+                id: 10,
+                name: "Mustard Yellow Silk Bundi Set",
+                category: "Kurta Bundi Set",
+                rating: 4.6,
+                reviews: 28,
+                image: "use_man_face_as_model_202606232128.jpeg",
+                desc: "Bright festive mustard yellow bundi jacket in pure tussar silk, worn over a plain cream kurta and pajama. The jacket is finished with custom hand-carved brass buttons."
+            },
+            {
+                id: 11,
+                name: "Deep Wine Brocade Sherwani",
+                category: "Sherwani",
+                rating: 4.8,
+                reviews: 16,
+                image: "use_man_face_as_model_202606232134.jpeg",
+                desc: "Royal wine-colored sherwani detailed in banarasi brocade with heavy golden weave motifs. Designed with a structured, slim-fit silhouette, straight hemline, and premium lining."
+            },
+            {
+                id: 12,
+                name: "Emerald Green Kurta Pajama",
+                category: "Kurta Set",
+                rating: 4.7,
+                reviews: 25,
+                image: "use_man_face_as_model_202606232151.jpeg",
+                desc: "A rich emerald green festive kurta crafted in fine silk-georgette with a subtle sheen. Detailed with delicate matching threadwork bordering the neckline and collar. Paired with white pajamas."
+            },
+            {
+                id: 13,
+                name: "Blush Pink Linen Kurta",
+                category: "Single Kurta",
+                rating: 4.2,
+                reviews: 10,
+                image: "use_man_face_as_model_202606232215.jpeg",
+                desc: "A relaxed, premium organic linen kurta in soft blush pink. Cool, comfortable, and perfect for resort wear or intimate family gatherings."
+            },
+            {
+                id: 14,
+                name: "Midnight Black Embroidered Sherwani",
+                category: "Sherwani",
+                rating: 4.8,
+                reviews: 35,
+                tag: "New Launch",
+                image: "use_man_face_as_model_202606232221 (1).jpeg",
+                desc: "Command presence with this modern midnight black sherwani. Featuring sleek matte-black thread work in geometric patterns and a premium concealed button placket. Complete with black silk churidar."
+            },
+            {
+                id: 15,
+                name: "Pastel Green Nehru Jacket",
+                category: "Nehru Jacket",
+                rating: 4.4,
+                reviews: 17,
+                image: "use_man_face_as_model_202606232221.jpeg",
+                desc: "Add a soft touch of pastel green to your festive look. Tailored in linen-silk blend with side vents and a pocket square loop. Ideal over a light pink or cream kurta."
+            },
+            {
+                id: 16,
+                name: "Rust Orange Kurta Bundi Set",
+                category: "Kurta Bundi Set",
+                rating: 4.6,
+                reviews: 20,
+                image: "use_man_face_as_model_202606232227.jpeg",
+                desc: "Expressive rust orange kurta set with a contrasting self-patterned beige-gold bundi jacket. Detailed with delicate threadwork and comfortable side pockets."
+            },
+            {
+                id: 17,
+                name: "Metallic Grey Modern Indo-Western",
+                category: "Sherwani",
+                rating: 4.7,
+                reviews: 22,
+                image: "use_man_face_as_model_202606232236.jpeg",
+                desc: "A fusion of traditional craft and contemporary lines. This metallic grey Indo-Western jacket is worn asymmetrical, styled with a draped collar and metallic waist belt detailing."
+            },
+            {
+                id: 18,
+                name: "Olive Green Georgette Kurta Set",
+                category: "Kurta Set",
+                rating: 4.5,
+                reviews: 14,
+                image: "use_man_face_as_model_202606232239.jpeg",
+                desc: "Chic olive green kurta pajama set. The georgette kurta is lined with cotton for utmost comfort, decorated with small mirror-work accents on the chest."
+            },
+            {
+                id: 19,
+                name: "Sky Blue Cotton Kurta",
+                category: "Single Kurta",
+                rating: 4.3,
+                reviews: 9,
+                image: "use_man_face_as_model_202606232242.jpeg",
+                desc: "An essential summer staple. This sky blue kurta is spun from premium Egyptian cotton, boasting a super soft texture, clean mandarin collar, and hidden button closures."
+            },
+            {
+                id: 20,
+                name: "Rich Maroon Silk Nehru Jacket",
+                category: "Nehru Jacket",
+                rating: 4.6,
+                reviews: 19,
+                image: "use_man_face_as_model_202606232244.jpeg",
+                desc: "Drape yourself in luxury with this maroon Nehru jacket crafted in raw silk. Decorated with minimal floral embroidery on the collar and a matching silk lining."
+            },
+            {
+                id: 21,
+                name: "Lilac Textured Kurta Set",
+                category: "Kurta Set",
+                rating: 4.5,
+                reviews: 11,
+                image: "use_man_face_as_model_202606232254.jpeg",
+                desc: "Charming lilac shade kurta set. Woven with a self-textured slub pattern, providing a rustic yet premium organic look. Accompanied by white straight-leg pants."
+            },
+            {
+                id: 22,
+                name: "Turquoise Blue Festive Kurta Set",
+                category: "Kurta Set",
+                rating: 4.6,
+                reviews: 18,
+                image: "use_man_face_as_model_202606232259.jpeg",
+                desc: "A bold, festive turquoise blue kurta pajama set. Featuring an exquisite foil-print gold design around the neck and button lining, creating a luxurious festive look."
+            },
+            {
+                id: 23,
+                name: "Beige Chikankari Kurta Set",
+                category: "Kurta Set",
+                rating: 4.8,
+                reviews: 30,
+                tag: "Artisanal",
+                image: "use_man_face_as_model_202606232334 (1).jpeg",
+                desc: "Timeless Chikankari hand embroidery from Lucknow. This beige georgette kurta features extensive, elaborate thread motifs throughout the body, layered over a soft inner lining."
+            },
+            {
+                id: 24,
+                name: "Burnt Gold Wedding Sherwani",
+                category: "Sherwani",
+                rating: 4.9,
+                reviews: 45,
+                tag: "Premium Groom",
+                image: "use_man_face_as_model_202606232343.jpeg",
+                desc: "A show-stopping wedding sherwani in burnt gold silk. Heavily embellished with hand-crafted kora, dabka, and zardozi work. The absolute peak of luxury ethnic wear for the modern groom."
+            }
+        ];
+
+        // ==========================================
+        // 2. STATE MANAGEMENT
+        // ==========================================
+        let searchQuery = '';
+        let selectedProduct = null;
+
+        // Load page
+        function initApp() {
+            renderProducts();
+        }
+
+        // ==========================================
+        // 3. UI ELEMENT SELECTORS
+        // ==========================================
+        const productGrid = document.getElementById('product-grid');
+        const searchInput = document.getElementById('search-input');
+        const quickViewModal = document.getElementById('quickview-modal');
+        const modalClose = document.getElementById('modal-close');
+
+        // ==========================================
+        // 4. RENDERING FUNCTIONS
+        // ==========================================
+        function getStarsHTML(rating) {
+            let html = '';
+            const fullStars = Math.floor(rating);
+            for (let i = 0; i < 5; i++) {
+                if (i < fullStars) {
+                    html += `<svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`;
+                } else {
+                    html += `<svg viewBox="0 0 24 24" style="opacity: 0.3;"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`;
+                }
+            }
+            return html;
+        }
+
+        function renderProducts() {
+            let filtered = products;
+
+            // Apply search query
+            if (searchQuery.trim() !== '') {
+                const query = searchQuery.toLowerCase().trim();
+                filtered = filtered.filter(p => 
+                    p.name.toLowerCase().includes(query) || 
+                    p.category.toLowerCase().includes(query) ||
+                    p.desc.toLowerCase().includes(query)
+                );
+            }
+
+            // Draw HTML
+            productGrid.innerHTML = '';
+            if (filtered.length === 0) {
+                productGrid.innerHTML = `
+                    <div class="no-results">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                        <h3>No outfits match your search</h3>
+                        <p>Try searching for a different keyword or explore other premium collections.</p>
+                        <button class="gold-btn" style="margin-top: 20px;" onclick="resetFilters()">View All Collections</button>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach((p, index) => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.style.animationDelay = `${index * 0.05}s`;
+                
+                card.innerHTML = `
+                    <div class="card-image-wrapper">
+                        ${p.tag ? `<div class="card-tag">${p.tag}</div>` : ''}
+                        <img src="${p.image}" alt="${p.name}" loading="lazy">
+                        <div class="hover-actions">
+                            <button class="quick-view-btn" onclick="openQuickView(${p.id})">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <span class="card-category">${p.category}</span>
+                        <h3 class="card-title">${p.name}</h3>
+                        <div class="rating-stars">
+                            ${getStarsHTML(p.rating)}
+                        </div>
+                    </div>
+                `;
+                
+                productGrid.appendChild(card);
+            });
+        }
+
+        // ==========================================
+        // 5. QUICK VIEW MODAL LOGIC
+        // ==========================================
+        function openQuickView(productId) {
+            const p = products.find(item => item.id === productId);
+            if (!p) return;
+
+            selectedProduct = p;
+            
+            document.getElementById('modal-img').src = p.image;
+            document.getElementById('modal-img').alt = p.name;
+            document.getElementById('modal-cat').textContent = p.category;
+            document.getElementById('modal-name').textContent = p.name;
+            document.getElementById('modal-desc').textContent = p.desc;
+            document.getElementById('modal-stars').innerHTML = getStarsHTML(p.rating);
+            document.getElementById('modal-rating-text').textContent = `(${p.reviews} customer reviews)`;
+            
+            // Set size select back to default 'M'
+            const sizeOpts = document.querySelectorAll('.size-option');
+            sizeOpts.forEach(opt => {
+                opt.classList.remove('active');
+                if (opt.getAttribute('data-size') === 'M') opt.classList.add('active');
+            });
+
+            quickViewModal.classList.add('open');
+        }
+
+        function closeQuickView() {
+            quickViewModal.classList.remove('open');
+            selectedProduct = null;
+        }
+
+        // ==========================================
+        // 6. ENQUIRY LOGIC
+        // ==========================================
+        function triggerEnquiry() {
+            if (!selectedProduct) return;
+            const size = document.querySelector('.size-option.active').getAttribute('data-size');
+            showToast(`Enquiry sent for ${selectedProduct.name} (Size: ${size}). Our representative will contact you shortly!`, 'success');
+            closeQuickView();
+        }
+
+        // ==========================================
+        // 7. TOAST NOTIFICATIONS LOGIC
+        // ==========================================
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            
+            let icon = '';
+            if (type === 'success') {
+                icon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>`;
+            } else if (type === 'info') {
+                icon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`;
+            }
+
+            toast.innerHTML = `
+                <div class="toast-icon">${icon}</div>
+                <div class="toast-message">${message}</div>
+            `;
+
+            container.appendChild(toast);
+            
+            // Animate in
+            setTimeout(() => toast.classList.add('show'), 50);
+
+            // Animate out and destroy
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => toast.remove(), 400);
+            }, 4000);
+        }
+
+        // ==========================================
+        // 8. FILTER & SORT EVENT LISTENERS
+        // ==========================================
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderProducts();
+        });
+
+        function resetFilters() {
+            searchQuery = '';
+            searchInput.value = '';
+            renderProducts();
+        }
+
+        // ==========================================
+        // 9. OTHER EVENT BINDINGS
+        // ==========================================
+        
+        // Sticky Header scroll script
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Modal Action Bindings
+        modalClose.addEventListener('click', closeQuickView);
+        quickViewModal.addEventListener('click', (e) => {
+            if (e.target === quickViewModal) closeQuickView();
+        });
+
+        // Size selector behavior inside Modal
+        document.getElementById('modal-sizes').addEventListener('click', (e) => {
+            if (!e.target.classList.contains('size-option')) return;
+            document.querySelectorAll('.size-option').forEach(opt => opt.classList.remove('active'));
+            e.target.classList.add('active');
+        });
+
+        // Initialize application on load
+        window.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
